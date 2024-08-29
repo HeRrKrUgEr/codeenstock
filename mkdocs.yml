@@ -1,0 +1,7 @@
+site_name: My Docs
+nav:
+  - Home: index.md
+  - Python: python.md
+  - JavaScript: javascript.md
+  - Git: git.md
+  - Docker: docker.git
