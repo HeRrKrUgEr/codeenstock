@@ -3,7 +3,7 @@ nav:
   - Home: index.md
   - Python: python.md
   - JavaScript: javascript.md
-  - Git: git.md
-    - Authentification Git: docs/git/auth.md
-    - CheatSheet: git.md
+  - Git:
+      - Authentification Git: docs/git/auth.md
+      - CheatSheet: git.md
   - Docker: docker.git
