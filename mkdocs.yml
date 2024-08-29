@@ -7,3 +7,7 @@ nav:
       - Authentification Git: git/auth.md
       - CheatSheet: git/git.md
   - Docker: docker.md
+theme:
+  name: mkdocs
+  highlightjs: true
+  color_mode: auto
