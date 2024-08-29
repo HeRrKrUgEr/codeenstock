@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Commandes Git les plus utiles - My Docs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../python/" class="nav-link">Python</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../javascript/" class="nav-link">JavaScript</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Git</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../docs/git/auth.md" class="dropdown-item">Authentification Git</a>
+</li>
+                                    
+<li>
+    <a href="../../git.md" class="dropdown-item">CheatSheet</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../docker.git" class="nav-link">Docker</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#commandes-git-les-plus-utiles" class="nav-link">Commandes Git les plus utiles</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#initialisation-et-configuration" class="nav-link">Initialisation et Configuration</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#gestion-des-modifications" class="nav-link">Gestion des Modifications</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#historique-et-journal" class="nav-link">Historique et Journal</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#branches" class="nav-link">Branches</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#reinitialisation-et-annulation" class="nav-link">Réinitialisation et Annulation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#remotes-depots-distants" class="nav-link">Remotes (Dépôts Distants)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#tags" class="nav-link">Tags</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#nettoyage" class="nav-link">Nettoyage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#autres-commandes-utiles" class="nav-link">Autres Commandes Utiles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="commandes-git-les-plus-utiles">Commandes Git les plus utiles</h1>
+<p>Git est un système de contrôle de version distribué, utilisé pour gérer les versions de code source. Voici une liste des commandes Git les plus couramment utilisées, avec des explications simples.</p>
+<h2 id="initialisation-et-configuration">Initialisation et Configuration</h2>
+<ul>
+<li>
+<p><code>git init</code><br />
+  Initialise un nouveau dépôt Git local.</p>
+</li>
+<li>
+<p><code>git clone &lt;url&gt;</code><br />
+  Clone un dépôt distant vers le répertoire local.</p>
+</li>
+<li>
+<p><code>git config --global user.name "Votre Nom"</code><br />
+  Configure le nom d'utilisateur global pour Git.</p>
+</li>
+<li>
+<p><code>git config --global user.email "votre_email@example.com"</code><br />
+  Configure l'adresse e-mail globale pour Git.</p>
+</li>
+</ul>
+<h2 id="gestion-des-modifications">Gestion des Modifications</h2>
+<ul>
+<li>
+<p><code>git status</code><br />
+  Affiche l'état actuel du dépôt, y compris les modifications non suivies, suivies et les fichiers non suivis.</p>
+</li>
+<li>
+<p><code>git add &lt;fichier&gt;</code><br />
+  Ajoute un fichier spécifique à l'index (staging area).</p>
+</li>
+<li>
+<p><code>git add .</code><br />
+  Ajoute tous les fichiers modifiés à l'index.</p>
+</li>
+<li>
+<p><code>git commit -m "Message de commit"</code><br />
+  Enregistre les modifications dans le dépôt avec un message de commit.</p>
+</li>
+<li>
+<p><code>git commit -a -m "Message de commit"</code><br />
+  Ajoute et commite tous les fichiers modifiés et suivis.</p>
+</li>
+</ul>
+<h2 id="historique-et-journal">Historique et Journal</h2>
+<ul>
+<li>
+<p><code>git log</code><br />
+  Affiche l'historique des commits.</p>
+</li>
+<li>
+<p><code>git log --oneline</code><br />
+  Affiche l'historique des commits dans un format compact.</p>
+</li>
+<li>
+<p><code>git diff</code><br />
+  Montre les différences entre les modifications non commitées et le dernier commit.</p>
+</li>
+<li>
+<p><code>git diff --staged</code><br />
+  Montre les différences entre les fichiers indexés et le dernier commit.</p>
+</li>
+</ul>
+<h2 id="branches">Branches</h2>
+<ul>
+<li>
+<p><code>git branch</code><br />
+  Liste toutes les branches locales.</p>
+</li>
+<li>
+<p><code>git branch &lt;nom_branche&gt;</code><br />
+  Crée une nouvelle branche.</p>
+</li>
+<li>
+<p><code>git checkout &lt;nom_branche&gt;</code><br />
+  Bascule vers une branche existante.</p>
+</li>
+<li>
+<p><code>git checkout -b &lt;nom_branche&gt;</code><br />
+  Crée et bascule vers une nouvelle branche.</p>
+</li>
+<li>
+<p><code>git merge &lt;nom_branche&gt;</code><br />
+  Fusionne la branche spécifiée avec la branche actuelle.</p>
+</li>
+<li>
+<p><code>git branch -d &lt;nom_branche&gt;</code><br />
+  Supprime une branche.</p>
+</li>
+</ul>
+<h2 id="reinitialisation-et-annulation">Réinitialisation et Annulation</h2>
+<ul>
+<li>
+<p><code>git reset &lt;fichier&gt;</code><br />
+  Annule les modifications dans l'index pour un fichier.</p>
+</li>
+<li>
+<p><code>git reset --hard</code><br />
+  Réinitialise l'index et l'arborescence de travail au dernier commit.</p>
+</li>
+<li>
+<p><code>git revert &lt;commit&gt;</code><br />
+  Annule un commit en créant un nouveau commit.</p>
+</li>
+</ul>
+<h2 id="remotes-depots-distants">Remotes (Dépôts Distants)</h2>
+<ul>
+<li>
+<p><code>git remote add origin &lt;url&gt;</code><br />
+  Ajoute un dépôt distant nommé "origin".</p>
+</li>
+<li>
+<p><code>git remote -v</code><br />
+  Affiche les dépôts distants configurés.</p>
+</li>
+<li>
+<p><code>git push origin &lt;nom_branche&gt;</code><br />
+  Envoie les commits de la branche locale vers le dépôt distant.</p>
+</li>
+<li>
+<p><code>git pull origin &lt;nom_branche&gt;</code><br />
+  Récupère les modifications du dépôt distant et les fusionne avec la branche locale.</p>
+</li>
+</ul>
+<h2 id="tags">Tags</h2>
+<ul>
+<li>
+<p><code>git tag &lt;nom_tag&gt;</code><br />
+  Crée un tag pour marquer un point dans l'historique des commits.</p>
+</li>
+<li>
+<p><code>git push origin &lt;nom_tag&gt;</code><br />
+  Envoie un tag spécifique vers le dépôt distant.</p>
+</li>
+</ul>
+<h2 id="nettoyage">Nettoyage</h2>
+<ul>
+<li>
+<p><code>git clean -f</code><br />
+  Supprime les fichiers non suivis dans le répertoire de travail.</p>
+</li>
+<li>
+<p><code>git gc</code><br />
+  Optimise la base de données des objets Git pour économiser de l'espace.</p>
+</li>
+</ul>
+<h2 id="autres-commandes-utiles">Autres Commandes Utiles</h2>
+<ul>
+<li>
+<p><code>git stash</code><br />
+  Sauvegarde les modifications actuelles sans les commiter.</p>
+</li>
+<li>
+<p><code>git stash apply</code><br />
+  Applique les modifications sauvegardées précédemment.</p>
+</li>
+<li>
+<p><code>git fetch</code><br />
+  Récupère les modifications du dépôt distant sans les fusionner.</p>
+</li>
+<li>
+<p><code>git rebase &lt;nom_branche&gt;</code><br />
+  Applique les commits de la branche actuelle par-dessus une autre branche.</p>
+</li>
+</ul>
+<hr />
+<p>Ces commandes Git couvrent les opérations de base et avancées pour gérer les versions de code. Utilisez cette cheatsheet comme référence rapide pour vos projets Git.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
