@@ -4,6 +4,6 @@ nav:
   - Python: python.md
   - JavaScript: javascript.md
   - Git:
-      - Authentification Git: docs/git/auth.md
-      - CheatSheet: git.md
-  - Docker: docker.git
+      - Authentification Git: git/auth.md
+      - CheatSheet: git/git.md
+  - Docker: docker.md
