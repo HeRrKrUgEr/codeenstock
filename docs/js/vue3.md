@@ -1,4 +1,4 @@
-# Vue 3 Composition API avec `script setup` Cheat Sheet
+# Vue 3 Composition API
 
 ## Introduction
 
@@ -8,15 +8,15 @@ Vue 3 introduit la Composition API, une nouvelle façon d'organiser et de struct
 
 ### Composant Simple avec `script setup`
 
-```vue
+```html
 <template>
   <div>{{ message }}</div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+  import { ref } from "vue";
 
-const message = ref("Hello, Vue 3!");
+  const message = ref("Hello, Vue 3!");
 </script>
 ```
 
@@ -45,15 +45,15 @@ const state = reactive({
 
 Toutes les variables définies dans le bloc `script setup` sont automatiquement exposées au template.
 
-```vue
+```html
 <template>
   <div>{{ count }}</div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+  import { ref } from "vue";
 
-const count = ref(0);
+  const count = ref(0);
 </script>
 ```
 
@@ -61,19 +61,19 @@ const count = ref(0);
 
 - Définir des fonctions directement dans le bloc `script setup`.
 
-```vue
+```html
 <template>
   <button @click="increment">Increment</button>
 </template>
 
 <script setup>
-import { ref } from "vue";
+  import { ref } from "vue";
 
-const count = ref(0);
+  const count = ref(0);
 
-function increment() {
-  count.value++;
-}
+  function increment() {
+    count.value++;
+  }
 </script>
 ```
 
@@ -81,15 +81,15 @@ function increment() {
 
 - Utiliser la directive `defineProps` pour déclarer des props.
 
-```vue
+```html
 <template>
   <div>{{ msg }}</div>
 </template>
 
 <script setup>
-const props = defineProps({
-  msg: String,
-});
+  const props = defineProps({
+    msg: String,
+  });
 </script>
 ```
 
@@ -97,17 +97,17 @@ const props = defineProps({
 
 - Utiliser `emit` pour émettre des événements.
 
-```vue
+```html
 <template>
   <button @click="emitEvent">Click Me</button>
 </template>
 
 <script setup>
-const emit = defineEmits(["myEvent"]);
+  const emit = defineEmits(["myEvent"]);
 
-function emitEvent() {
-  emit("myEvent", "Hello World");
-}
+  function emitEvent() {
+    emit("myEvent", "Hello World");
+  }
 </script>
 ```
 
@@ -131,13 +131,13 @@ onUnmounted(() => {
 
 - Importer un composant enfant dans un composant parent avec `script setup`.
 
-```vue
+```html
 <template>
   <ChildComponent />
 </template>
 
 <script setup>
-import ChildComponent from "./ChildComponent.vue";
+  import ChildComponent from "./ChildComponent.vue";
 </script>
 ```
 
@@ -145,21 +145,21 @@ import ChildComponent from "./ChildComponent.vue";
 
 - Utiliser `axios` ou `fetch` pour les requêtes API.
 
-```vue
+```html
 <template>
   <div v-if="data">{{ data }}</div>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import axios from "axios";
+  import { ref, onMounted } from "vue";
+  import axios from "axios";
 
-const data = ref(null);
+  const data = ref(null);
 
-onMounted(async () => {
-  const response = await axios.get("https://api.example.com/data");
-  data.value = response.data;
-});
+  onMounted(async () => {
+    const response = await axios.get("https://api.example.com/data");
+    data.value = response.data;
+  });
 </script>
 ```
 
@@ -167,22 +167,22 @@ onMounted(async () => {
 
 ### Usage de `computed`
 
-```vue
+```html
 <template>
   <div>{{ doubled }}</div>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+  import { ref, computed } from "vue";
 
-const count = ref(2);
-const doubled = computed(() => count.value * 2);
+  const count = ref(2);
+  const doubled = computed(() => count.value * 2);
 </script>
 ```
 
 ### Formulaires Réactifs
 
-```vue
+```html
 <template>
   <form @submit.prevent="handleSubmit">
     <input v-model="form.name" placeholder="Name" />
@@ -191,14 +191,14 @@ const doubled = computed(() => count.value * 2);
 </template>
 
 <script setup>
-import { reactive } from "vue";
+  import { reactive } from "vue";
 
-const form = reactive({
-  name: "",
-});
+  const form = reactive({
+    name: "",
+  });
 
-function handleSubmit() {
-  console.log(form.name);
-}
+  function handleSubmit() {
+    console.log(form.name);
+  }
 </script>
 ```
