@@ -153,6 +153,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-bs-level="2"><a href="#astuces" class="nav-link">Astuces</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -348,6 +352,10 @@
   Importe un système de fichiers dans une nouvelle image Docker.</p>
 </li>
 </ul>
+<h2 id="astuces">Astuces</h2>
+<p>Supprimer tous les containers sauf un en particulier</p>
+<pre><code class="language-bash">docker ps -aq | grep -v $(docker ps -aqf &quot;name=my_container&quot;) | xargs docker rm
+</code></pre>
 <hr />
 <p>Cette cheatsheet couvre les commandes Docker les plus couramment utilisées pour la gestion des images, des conteneurs, des réseaux, des volumes, et des tâches de diagnostic. Utilisez-la comme référence rapide pour vos opérations Docker quotidiennes.</p></div>
             </div>
