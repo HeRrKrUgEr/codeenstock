@@ -140,14 +140,14 @@
 <p>Vue 3 introduit la Composition API, une nouvelle façon d'organiser et de structurer les composants. La Composition API permet de mieux réutiliser la logique et offre plus de flexibilité par rapport à l'API Options classique.</p>
 <h2 id="syntaxe-de-base">Syntaxe de Base</h2>
 <h3 id="composant-simple-avec-script-setup">Composant Simple avec <code>script setup</code></h3>
-<pre><code class="language-vue">&lt;template&gt;
+<pre><code class="language-html">&lt;template&gt;
   &lt;div&gt;{{ message }}&lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script setup&gt;
-import { ref } from &quot;vue&quot;;
+  import { ref } from &quot;vue&quot;;
 
-const message = ref(&quot;Hello, Vue 3!&quot;);
+  const message = ref(&quot;Hello, Vue 3!&quot;);
 &lt;/script&gt;
 </code></pre>
 <h3 id="variables-reactives">Variables Réactives</h3>
@@ -170,62 +170,62 @@ const state = reactive({
 </code></pre>
 <h3 id="exposer-des-variables-a-template">Exposer des Variables à Template</h3>
 <p>Toutes les variables définies dans le bloc <code>script setup</code> sont automatiquement exposées au template.</p>
-<pre><code class="language-vue">&lt;template&gt;
+<pre><code class="language-html">&lt;template&gt;
   &lt;div&gt;{{ count }}&lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script setup&gt;
-import { ref } from &quot;vue&quot;;
+  import { ref } from &quot;vue&quot;;
 
-const count = ref(0);
+  const count = ref(0);
 &lt;/script&gt;
 </code></pre>
 <h3 id="methodes-et-fonctions">Méthodes et Fonctions</h3>
 <ul>
 <li>Définir des fonctions directement dans le bloc <code>script setup</code>.</li>
 </ul>
-<pre><code class="language-vue">&lt;template&gt;
+<pre><code class="language-html">&lt;template&gt;
   &lt;button @click=&quot;increment&quot;&gt;Increment&lt;/button&gt;
 &lt;/template&gt;
 
 &lt;script setup&gt;
-import { ref } from &quot;vue&quot;;
+  import { ref } from &quot;vue&quot;;
 
-const count = ref(0);
+  const count = ref(0);
 
-function increment() {
-  count.value++;
-}
+  function increment() {
+    count.value++;
+  }
 &lt;/script&gt;
 </code></pre>
 <h3 id="props">Props</h3>
 <ul>
 <li>Utiliser la directive <code>defineProps</code> pour déclarer des props.</li>
 </ul>
-<pre><code class="language-vue">&lt;template&gt;
+<pre><code class="language-html">&lt;template&gt;
   &lt;div&gt;{{ msg }}&lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script setup&gt;
-const props = defineProps({
-  msg: String,
-});
+  const props = defineProps({
+    msg: String,
+  });
 &lt;/script&gt;
 </code></pre>
 <h3 id="evenements">Événements</h3>
 <ul>
 <li>Utiliser <code>emit</code> pour émettre des événements.</li>
 </ul>
-<pre><code class="language-vue">&lt;template&gt;
+<pre><code class="language-html">&lt;template&gt;
   &lt;button @click=&quot;emitEvent&quot;&gt;Click Me&lt;/button&gt;
 &lt;/template&gt;
 
 &lt;script setup&gt;
-const emit = defineEmits([&quot;myEvent&quot;]);
+  const emit = defineEmits([&quot;myEvent&quot;]);
 
-function emitEvent() {
-  emit(&quot;myEvent&quot;, &quot;Hello World&quot;);
-}
+  function emitEvent() {
+    emit(&quot;myEvent&quot;, &quot;Hello World&quot;);
+  }
 &lt;/script&gt;
 </code></pre>
 <h3 id="lifecycle-hooks">Lifecycle Hooks</h3>
@@ -244,49 +244,49 @@ onUnmounted(() =&gt; {
 <ul>
 <li>Importer un composant enfant dans un composant parent avec <code>script setup</code>.</li>
 </ul>
-<pre><code class="language-vue">&lt;template&gt;
+<pre><code class="language-html">&lt;template&gt;
   &lt;ChildComponent /&gt;
 &lt;/template&gt;
 
 &lt;script setup&gt;
-import ChildComponent from &quot;./ChildComponent.vue&quot;;
+  import ChildComponent from &quot;./ChildComponent.vue&quot;;
 &lt;/script&gt;
 </code></pre>
 <h2 id="requetes-api">Requêtes API</h2>
 <ul>
 <li>Utiliser <code>axios</code> ou <code>fetch</code> pour les requêtes API.</li>
 </ul>
-<pre><code class="language-vue">&lt;template&gt;
+<pre><code class="language-html">&lt;template&gt;
   &lt;div v-if=&quot;data&quot;&gt;{{ data }}&lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script setup&gt;
-import { ref, onMounted } from &quot;vue&quot;;
-import axios from &quot;axios&quot;;
+  import { ref, onMounted } from &quot;vue&quot;;
+  import axios from &quot;axios&quot;;
 
-const data = ref(null);
+  const data = ref(null);
 
-onMounted(async () =&gt; {
-  const response = await axios.get(&quot;https://api.example.com/data&quot;);
-  data.value = response.data;
-});
+  onMounted(async () =&gt; {
+    const response = await axios.get(&quot;https://api.example.com/data&quot;);
+    data.value = response.data;
+  });
 &lt;/script&gt;
 </code></pre>
 <h2 id="exemples-avances">Exemples Avancés</h2>
 <h3 id="usage-de-computed">Usage de <code>computed</code></h3>
-<pre><code class="language-vue">&lt;template&gt;
+<pre><code class="language-html">&lt;template&gt;
   &lt;div&gt;{{ doubled }}&lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script setup&gt;
-import { ref, computed } from &quot;vue&quot;;
+  import { ref, computed } from &quot;vue&quot;;
 
-const count = ref(2);
-const doubled = computed(() =&gt; count.value * 2);
+  const count = ref(2);
+  const doubled = computed(() =&gt; count.value * 2);
 &lt;/script&gt;
 </code></pre>
 <h3 id="formulaires-reactifs">Formulaires Réactifs</h3>
-<pre><code class="language-vue">&lt;template&gt;
+<pre><code class="language-html">&lt;template&gt;
   &lt;form @submit.prevent=&quot;handleSubmit&quot;&gt;
     &lt;input v-model=&quot;form.name&quot; placeholder=&quot;Name&quot; /&gt;
     &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
@@ -294,15 +294,15 @@ const doubled = computed(() =&gt; count.value * 2);
 &lt;/template&gt;
 
 &lt;script setup&gt;
-import { reactive } from &quot;vue&quot;;
+  import { reactive } from &quot;vue&quot;;
 
-const form = reactive({
-  name: &quot;&quot;,
-});
+  const form = reactive({
+    name: &quot;&quot;,
+  });
 
-function handleSubmit() {
-  console.log(form.name);
-}
+  function handleSubmit() {
+    console.log(form.name);
+  }
 &lt;/script&gt;
 </code></pre></div>
             </div>
