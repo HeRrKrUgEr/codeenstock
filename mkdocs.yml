@@ -2,7 +2,8 @@ site_name: My Docs
 nav:
   - Home: index.md
   - Python: python.md
-  - JavaScript: javascript.md
+  - JavaScript:
+      - AlpineJS: js/alpinejs.md
   - Git:
       - Authentification Git: git/auth.md
       - CheatSheet: git/git.md
