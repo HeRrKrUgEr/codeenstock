@@ -4,6 +4,7 @@ nav:
   - Python: python.md
   - JavaScript:
       - AlpineJS: js/alpinejs.md
+      - Vue3 Composition Api: js/vue3.md
   - Git:
       - Authentification Git: git/auth.md
       - CheatSheet: git/git.md
