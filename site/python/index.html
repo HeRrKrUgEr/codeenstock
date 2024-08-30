@@ -40,8 +40,18 @@
                             <li class="nav-item">
                                 <a href="./" class="nav-link active" aria-current="page">Python</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../javascript/" class="nav-link">JavaScript</a>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">JavaScript</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../js/alpinejs/" class="dropdown-item">AlpineJS</a>
+</li>
+                                    
+<li>
+    <a href="../js/vue3/" class="dropdown-item">Vue3 Composition Api</a>
+</li>
+                                </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Git</a>
@@ -73,7 +83,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../javascript/" class="nav-link">
+                                <a rel="next" href="../js/alpinejs/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -95,12 +105,106 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#cheat-sheet-des-fonctions-utiles-en-python" class="nav-link">Cheat Sheet des Fonctions Utiles en Python</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#types-de-donnees-de-base" class="nav-link">Types de Données de Base</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#collections" class="nav-link">Collections</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#fonctions-utiles" class="nav-link">Fonctions Utiles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-</div>
+<h1 id="cheat-sheet-des-fonctions-utiles-en-python">Cheat Sheet des Fonctions Utiles en Python</h1>
+<h2 id="types-de-donnees-de-base">Types de Données de Base</h2>
+<h3 id="nombres">Nombres</h3>
+<pre><code class="language-python"># Opérations sur les entiers et les flottants
+a = 10
+b = 5.5
+
+somme = a + b  # Addition
+difference = a - b  # Soustraction
+produit = a * b  # Multiplication
+quotient = a / b  # Division
+</code></pre>
+<h3 id="chaines-de-caracteres">Chaînes de caractères</h3>
+<pre><code class="language-python"># Opérations sur les chaînes de caractères
+s = &quot;Bonjour, Monde!&quot;
+
+s_majuscule = s.upper()  # Convertir en majuscules
+s_minuscule = s.lower()  # Convertir en minuscules
+s_split = s.split(',')  # Diviser la chaîne en liste
+s_replace = s.replace('Monde', 'Python')  # Remplacer une sous-chaîne
+</code></pre>
+<h2 id="collections">Collections</h2>
+<h3 id="listes">Listes</h3>
+<pre><code class="language-python"># Opérations sur les listes
+ma_liste = [1, 2, 3, 4, 5]
+
+ma_liste.append(6)  # Ajouter un élément
+ma_liste.remove(3)  # Supprimer un élément
+ma_liste.sort()  # Trier la liste
+ma_liste.reverse()  # Inverser la liste
+</code></pre>
+<h3 id="dictionnaires">Dictionnaires</h3>
+<pre><code class="language-python"># Opérations sur les dictionnaires
+mon_dict = {'nom': 'Jean', 'âge': 30}
+
+nom = mon_dict.get('nom')  # Obtenir la valeur par clé
+mon_dict['âge'] = 31  # Modifier une valeur
+cles = mon_dict.keys()  # Obtenir toutes les clés
+valeurs = mon_dict.values()  # Obtenir toutes les valeurs
+</code></pre>
+<h2 id="fonctions-utiles">Fonctions Utiles</h2>
+<h3 id="fonctions-de-base">Fonctions de Base</h3>
+<pre><code class="language-python">print(&quot;Bonjour&quot;)  # Afficher du texte
+len(ma_liste)  # Obtenir la longueur d'une liste ou chaîne
+type(a)  # Obtenir le type d'une variable
+</code></pre>
+<h3 id="manipulation-de-fichiers">Manipulation de Fichiers</h3>
+<pre><code class="language-python"># Lire un fichier
+with open('fichier.txt', 'r') as f:
+    contenu = f.read()
+
+# Écrire dans un fichier
+with open('fichier.txt', 'w') as f:
+    f.write(&quot;Bonjour, Monde!&quot;)
+</code></pre>
+<h3 id="fonctions-de-boucles">Fonctions de Boucles</h3>
+<pre><code class="language-python"># Boucle for
+for i in range(5):
+    print(i)
+
+# Boucle while
+compteur = 0
+while compteur &lt; 5:
+    print(compteur)
+    compteur += 1
+</code></pre>
+<h3 id="comprehensions-de-listes">Compréhensions de Listes</h3>
+<pre><code class="language-python"># Créer une nouvelle liste avec des carrés des nombres
+carrés = [x**2 for x in range(10)]
+</code></pre>
+<h3 id="gestion-des-exceptions">Gestion des Exceptions</h3>
+<pre><code class="language-python">try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print(&quot;Division par zéro non autorisée!&quot;)
+finally:
+    print(&quot;Opération terminée.&quot;)
+</code></pre></div>
             </div>
         </div>
 
