@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Authentification Git - My Docs</title>
+        <title>AlpineJS - My Docs</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -41,24 +41,24 @@
                                 <a href="../../python/" class="nav-link">Python</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">JavaScript</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">JavaScript</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../js/alpinejs/" class="dropdown-item">AlpineJS</a>
+    <a href="./" class="dropdown-item active" aria-current="page">AlpineJS</a>
 </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Git</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Git</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Authentification Git</a>
+    <a href="../../git/auth/" class="dropdown-item">Authentification Git</a>
 </li>
                                     
 <li>
-    <a href="../git/" class="dropdown-item">CheatSheet</a>
+    <a href="../../git/git/" class="dropdown-item">CheatSheet</a>
 </li>
                                 </ul>
                             </li>
@@ -74,12 +74,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../js/alpinejs/" class="nav-link">
+                                <a rel="prev" href="../../python/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../git/" class="nav-link">
+                                <a rel="next" href="../../git/auth/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -87,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <script src="../../js/darkmode.js"></script>
+        <script src="../darkmode.js"></script>
 
         <div class="container">
             <div class="row">
@@ -102,9 +102,37 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#authentification-git-pour-github" class="nav-link">Authentification Git pour GitHub</a>
+            <li class="nav-item" data-bs-level="1"><a href="#cheatsheet-alpinejs" class="nav-link">Cheatsheet Alpine.js</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#1-authentification-avec-https-et-un-token-dacces-personnel" class="nav-link">1. Authentification avec HTTPS et un Token d'Accès Personnel</a>
+            <li class="nav-item" data-bs-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#installation" class="nav-link">Installation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#directives-de-base" class="nav-link">Directives de base</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#methodes-magiques" class="nav-link">Méthodes magiques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#modificateurs-devenements" class="nav-link">Modificateurs d'événements</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cycle-de-vie" class="nav-link">Cycle de vie</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#plugins" class="nav-link">Plugins</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#conclusion" class="nav-link">Conclusion</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -115,36 +143,96 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="authentification-git-pour-github">Authentification Git pour GitHub</h1>
-<p>Pour pousser du code vers un dépôt distant sur GitHub, il faut s'authentifier. Voici les méthodes les plus courantes :</p>
-<h2 id="1-authentification-avec-https-et-un-token-dacces-personnel">1. Authentification avec HTTPS et un Token d'Accès Personnel</h2>
-<ol>
-<li>
-<p><strong>Générer un Token d'Accès Personnel</strong> :</p>
-</li>
-<li>
-<p>Connectez-vous à GitHub.</p>
-</li>
-<li>Allez dans <strong>Settings</strong> &gt; <strong>Developer settings</strong> &gt; <strong>Personal access tokens</strong>.</li>
-<li>Cliquez sur <strong>Tokens (classic)</strong> et <strong>Generate new token</strong>.</li>
-<li>
-<p>Sélectionnez les permissions nécessaires, comme <code>repo</code>.</p>
-</li>
-<li>
-<p><strong>Utiliser le Token</strong> :</p>
-</li>
-<li>
-<p>Lors de l'utilisation de <code>git push</code>, entrez votre nom d'utilisateur GitHub.</p>
-</li>
-<li>
-<p>Utilisez le token comme mot de passe.</p>
-</li>
-<li>
-<p><strong>Configurer Git pour Mémoriser le Token</strong> :</p>
-</li>
-</ol>
-<p><code>bash
-   git config --global credential.helper cache</code></p></div>
+<h1 id="cheatsheet-alpinejs">Cheatsheet Alpine.js</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Alpine.js est un framework JavaScript léger pour ajouter des fonctionnalités interactives à vos pages web de manière déclarative.</p>
+<h2 id="installation">Installation</h2>
+<pre><code class="language-html">&lt;script src=&quot;https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js&quot; defer&gt;&lt;/script&gt;
+</code></pre>
+<h2 id="directives-de-base">Directives de base</h2>
+<h3 id="x-data">x-data</h3>
+<p>Définit un objet de données pour un composant.</p>
+<pre><code class="language-html">&lt;div x-data=&quot;{ open: false }&quot;&gt;
+  &lt;!-- Contenu du composant --&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="x-bind">x-bind</h3>
+<p>Lie un attribut à une expression.</p>
+<pre><code class="language-html">&lt;button x-bind:disabled=&quot;!form.valid&quot;&gt;Envoyer&lt;/button&gt;
+</code></pre>
+<p>Raccourci : <code>:disabled="!form.valid"</code></p>
+<h3 id="x-on">x-on</h3>
+<p>Attache un écouteur d'événement à un élément.</p>
+<pre><code class="language-html">&lt;button x-on:click=&quot;open = true&quot;&gt;Ouvrir&lt;/button&gt;
+</code></pre>
+<p>Raccourci : <code>@click="open = true"</code></p>
+<h3 id="x-text">x-text</h3>
+<p>Met à jour le contenu texte d'un élément.</p>
+<pre><code class="language-html">&lt;span x-text=&quot;message&quot;&gt;&lt;/span&gt;
+</code></pre>
+<h3 id="x-html">x-html</h3>
+<p>Met à jour le contenu HTML d'un élément.</p>
+<pre><code class="language-html">&lt;div x-html=&quot;htmlContent&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="x-model">x-model</h3>
+<p>Crée une liaison bidirectionnelle sur un élément de formulaire.</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; x-model=&quot;name&quot; /&gt;
+</code></pre>
+<h3 id="x-show">x-show</h3>
+<p>Bascule la visibilité d'un élément.</p>
+<pre><code class="language-html">&lt;div x-show=&quot;isVisible&quot;&gt;Contenu visible&lt;/div&gt;
+</code></pre>
+<h3 id="x-if">x-if</h3>
+<p>Ajoute ou supprime un élément du DOM.</p>
+<pre><code class="language-html">&lt;template x-if=&quot;isLoggedIn&quot;&gt;
+  &lt;nav&gt;&lt;!-- Menu pour utilisateurs connectés --&gt;&lt;/nav&gt;
+&lt;/template&gt;
+</code></pre>
+<h3 id="x-for">x-for</h3>
+<p>Itère sur un tableau pour créer des éléments du DOM.</p>
+<pre><code class="language-html">&lt;template x-for=&quot;item in items&quot;&gt;
+  &lt;li x-text=&quot;item&quot;&gt;&lt;/li&gt;
+&lt;/template&gt;
+</code></pre>
+<h2 id="methodes-magiques">Méthodes magiques</h2>
+<h3 id="refs">$refs</h3>
+<p>Accède aux éléments DOM référencés.</p>
+<pre><code class="language-html">&lt;div x-ref=&quot;content&quot;&gt;&lt;/div&gt;
+&lt;button @click=&quot;$refs.content.innerHTML = 'Nouveau contenu'&quot;&gt;Modifier&lt;/button&gt;
+</code></pre>
+<h3 id="el">$el</h3>
+<p>Fait référence à l'élément DOM actuel.</p>
+<pre><code class="language-html">&lt;button @click=&quot;$el.textContent = 'Cliqué'&quot;&gt;Cliquez-moi&lt;/button&gt;
+</code></pre>
+<h3 id="watch">$watch</h3>
+<p>Observe les changements d'une propriété.</p>
+<pre><code class="language-html">&lt;div x-init=&quot;$watch('count', value =&gt; console.log(value))&quot;&gt;&lt;/div&gt;
+</code></pre>
+<h3 id="dispatch">$dispatch</h3>
+<p>Déclenche un événement personnalisé.</p>
+<pre><code class="language-html">&lt;button @click=&quot;$dispatch('custom-event', { data: 'example' })&quot;&gt;Envoyer&lt;/button&gt;
+</code></pre>
+<h2 id="modificateurs-devenements">Modificateurs d'événements</h2>
+<ul>
+<li><code>.prevent</code> : équivalent à <code>event.preventDefault()</code></li>
+<li><code>.stop</code> : équivalent à <code>event.stopPropagation()</code></li>
+<li><code>.outside</code> : déclenche le gestionnaire si l'événement se produit en dehors de l'élément</li>
+<li><code>.window</code> : écoute l'événement sur l'objet window</li>
+<li><code>.debounce</code> : retarde l'exécution du gestionnaire</li>
+</ul>
+<h2 id="cycle-de-vie">Cycle de vie</h2>
+<h3 id="x-init">x-init</h3>
+<p>Exécute des expressions lors de l'initialisation d'un composant.</p>
+<pre><code class="language-html">&lt;div x-init=&quot;fetchData()&quot;&gt;
+  &lt;!-- Contenu du composant --&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="plugins">Plugins</h2>
+<p>Alpine.js peut être étendu avec des plugins pour ajouter des fonctionnalités supplémentaires.</p>
+<pre><code class="language-javascript">Alpine.plugin(myPlugin);
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>Cette cheatsheet couvre les fonctionnalités principales d'Alpine.js. Pour une documentation plus détaillée et des exemples avancés, consultez la <a href="https://alpinejs.dev/">documentation officielle d'Alpine.js</a>.</p></div>
             </div>
         </div>
 
@@ -152,12 +240,12 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script src="../bootstrap.bundle.min.js"></script>
         <script>
             var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js"></script>
+        <script src="../base.js"></script>
         <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
