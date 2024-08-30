@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Vue3 Composition Api - Plan Geek</title>
+        <title>Razor - Plan Geek</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -41,24 +41,24 @@
                                 <a href="../../python/" class="nav-link">Python</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">JavaScript</a>
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">JavaScript</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../alpinejs/" class="dropdown-item">AlpineJS</a>
+    <a href="../../js/alpinejs/" class="dropdown-item">AlpineJS</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Vue3 Composition Api</a>
+    <a href="../../js/vue3/" class="dropdown-item">Vue3 Composition Api</a>
 </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">.NET Core</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">.NET Core</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../dotnet/razor/" class="dropdown-item">Razor</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Razor</a>
 </li>
                                 </ul>
                             </li>
@@ -87,12 +87,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../alpinejs/" class="nav-link">
+                                <a rel="prev" href="../../js/vue3/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../dotnet/razor/" class="nav-link">
+                                <a rel="next" href="../../git/auth/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -100,7 +100,7 @@
                 </div>
             </div>
         </div>
-        <script src="../darkmode.js"></script>
+        <script src="../../js/darkmode.js"></script>
 
         <div class="container">
             <div class="row">
@@ -115,7 +115,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#vue-3-composition-api" class="nav-link">Vue 3 Composition API</a>
+            <li class="nav-item" data-bs-level="1"><a href="#cheat-sheet-razor-net-core" class="nav-link">Cheat Sheet Razor .NET Core</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#introduction" class="nav-link">Introduction</a>
               <ul class="nav flex-column">
@@ -125,15 +125,27 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#utilisation-des-composants" class="nav-link">Utilisation des Composants</a>
+            <li class="nav-item" data-bs-level="2"><a href="#boucles-et-conditions" class="nav-link">Boucles et Conditions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#requetes-api" class="nav-link">Requêtes API</a>
+            <li class="nav-item" data-bs-level="2"><a href="#liens-et-actions" class="nav-link">Liens et Actions</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#exemples-avances" class="nav-link">Exemples Avancés</a>
+            <li class="nav-item" data-bs-level="2"><a href="#affichage-conditionnel-et-boucles" class="nav-link">Affichage Conditionnel et Boucles</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#helpers-html" class="nav-link">Helpers HTML</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#validation-et-messages-derreur" class="nav-link">Validation et Messages d'Erreur</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#partials-et-layouts" class="nav-link">Partials et Layouts</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -144,175 +156,100 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="vue-3-composition-api">Vue 3 Composition API</h1>
+<h1 id="cheat-sheet-razor-net-core">Cheat Sheet Razor .NET Core</h1>
 <h2 id="introduction">Introduction</h2>
-<p>Vue 3 introduit la Composition API, une nouvelle façon d'organiser et de structurer les composants. La Composition API permet de mieux réutiliser la logique et offre plus de flexibilité par rapport à l'API Options classique.</p>
+<p>Razor est un moteur de template de syntaxe qui permet de combiner du code C# avec du HTML de manière propre et lisible. Il est largement utilisé dans les applications ASP.NET Core pour la création de vues dynamiques.</p>
 <h2 id="syntaxe-de-base">Syntaxe de Base</h2>
-<h3 id="composant-simple-avec-script-setup">Composant Simple avec <code>script setup</code></h3>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;div&gt;{{ message }}&lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script setup&gt;
-  import { ref } from &quot;vue&quot;;
-
-  const message = ref(&quot;Hello, Vue 3!&quot;);
-&lt;/script&gt;
+<h3 id="code-c-dans-razor">Code C# dans Razor</h3>
+<pre><code class="language-html">@{ var message = &quot;Bonjour, Monde!&quot;; }
+&lt;p&gt;@message&lt;/p&gt;
 </code></pre>
-<h3 id="variables-reactives">Variables Réactives</h3>
-<ul>
-<li>Utiliser <code>ref</code> pour créer une valeur réactive simple.</li>
-</ul>
-<pre><code class="language-javascript">import { ref } from &quot;vue&quot;;
-
-const count = ref(0);
+<h3 id="expressions-c-inline">Expressions C# Inline</h3>
+<pre><code class="language-html">&lt;p&gt;Le résultat est: @(&quot;Hello, &quot; + &quot;World!&quot;)&lt;/p&gt;
 </code></pre>
-<ul>
-<li>Utiliser <code>reactive</code> pour créer un objet réactif.</li>
-</ul>
-<pre><code class="language-javascript">import { reactive } from &quot;vue&quot;;
-
-const state = reactive({
-  count: 0,
-  name: &quot;Vincent&quot;,
-});
+<h3 id="commentaires-razor">Commentaires Razor</h3>
+<pre><code class="language-html">@* Ceci est un commentaire Razor *@
 </code></pre>
-<h3 id="exposer-des-variables-a-template">Exposer des Variables à Template</h3>
-<p>Toutes les variables définies dans le bloc <code>script setup</code> sont automatiquement exposées au template.</p>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;div&gt;{{ count }}&lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script setup&gt;
-  import { ref } from &quot;vue&quot;;
-
-  const count = ref(0);
-&lt;/script&gt;
+<h3 id="directives-importantes">Directives Importantes</h3>
+<pre><code class="language-html">@using MonProjet.Models // Importer un espace de nom @model
+MonProjet.Models.MonModele // Spécifier le modèle de vue @inject MonService
+myService // Injection de service @inherits MaClasseDeBase // Inhérer d'une
+classe de base @functions { // Ajouter des fonctions C# custom }
 </code></pre>
-<h3 id="methodes-et-fonctions">Méthodes et Fonctions</h3>
-<ul>
-<li>Définir des fonctions directement dans le bloc <code>script setup</code>.</li>
-</ul>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;button @click=&quot;increment&quot;&gt;Increment&lt;/button&gt;
-&lt;/template&gt;
-
-&lt;script setup&gt;
-  import { ref } from &quot;vue&quot;;
-
-  const count = ref(0);
-
-  function increment() {
-    count.value++;
-  }
-&lt;/script&gt;
+<h2 id="boucles-et-conditions">Boucles et Conditions</h2>
+<h3 id="conditionnelle-if">Conditionnelle <code>if</code></h3>
+<pre><code class="language-html">@if (Model.IsLoggedIn) {
+&lt;p&gt;Bienvenue, @Model.UserName!&lt;/p&gt;
+} else {
+&lt;p&gt;Veuillez vous connecter.&lt;/p&gt;
+}
 </code></pre>
-<h3 id="props">Props</h3>
-<ul>
-<li>Utiliser la directive <code>defineProps</code> pour déclarer des props.</li>
-</ul>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;div&gt;{{ msg }}&lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script setup&gt;
-  const props = defineProps({
-    msg: String,
-  });
-&lt;/script&gt;
+<h3 id="boucle-for">Boucle <code>for</code></h3>
+<pre><code class="language-html">@for (int i = 0; i &lt; 10; i++) {
+&lt;p&gt;Numéro: @i&lt;/p&gt;
+}
 </code></pre>
-<h3 id="evenements">Événements</h3>
-<ul>
-<li>Utiliser <code>emit</code> pour émettre des événements.</li>
-</ul>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;button @click=&quot;emitEvent&quot;&gt;Click Me&lt;/button&gt;
-&lt;/template&gt;
-
-&lt;script setup&gt;
-  const emit = defineEmits([&quot;myEvent&quot;]);
-
-  function emitEvent() {
-    emit(&quot;myEvent&quot;, &quot;Hello World&quot;);
-  }
-&lt;/script&gt;
+<h3 id="boucle-foreach">Boucle <code>foreach</code></h3>
+<pre><code class="language-html">@foreach (var item in Model.Items) {
+&lt;p&gt;@item.Name&lt;/p&gt;
+}
 </code></pre>
-<h3 id="lifecycle-hooks">Lifecycle Hooks</h3>
-<p>Les hooks de cycle de vie peuvent être utilisés directement dans le bloc <code>script setup</code>.</p>
-<pre><code class="language-javascript">import { onMounted, onUnmounted } from &quot;vue&quot;;
-
-onMounted(() =&gt; {
-  console.log(&quot;Component mounted&quot;);
-});
-
-onUnmounted(() =&gt; {
-  console.log(&quot;Component unmounted&quot;);
-});
+<h2 id="liens-et-actions">Liens et Actions</h2>
+<h3 id="generer-un-lien-daction">Générer un lien d'action</h3>
+<pre><code class="language-html">&lt;a asp-controller=&quot;Home&quot; asp-action=&quot;Index&quot;&gt;Accueil&lt;/a&gt;
 </code></pre>
-<h2 id="utilisation-des-composants">Utilisation des Composants</h2>
-<ul>
-<li>Importer un composant enfant dans un composant parent avec <code>script setup</code>.</li>
-</ul>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;ChildComponent /&gt;
-&lt;/template&gt;
-
-&lt;script setup&gt;
-  import ChildComponent from &quot;./ChildComponent.vue&quot;;
-&lt;/script&gt;
+<h3 id="lien-avec-parametres">Lien avec paramètres</h3>
+<pre><code class="language-html">&lt;a asp-controller=&quot;Produit&quot; asp-action=&quot;Détails&quot; asp-route-id=&quot;@item.Id&quot;
+  &gt;Voir Détails&lt;/a
+&gt;
 </code></pre>
-<h2 id="requetes-api">Requêtes API</h2>
-<ul>
-<li>Utiliser <code>axios</code> ou <code>fetch</code> pour les requêtes API.</li>
-</ul>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;div v-if=&quot;data&quot;&gt;{{ data }}&lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script setup&gt;
-  import { ref, onMounted } from &quot;vue&quot;;
-  import axios from &quot;axios&quot;;
-
-  const data = ref(null);
-
-  onMounted(async () =&gt; {
-    const response = await axios.get(&quot;https://api.example.com/data&quot;);
-    data.value = response.data;
-  });
-&lt;/script&gt;
+<h2 id="affichage-conditionnel-et-boucles">Affichage Conditionnel et Boucles</h2>
+<h3 id="boucle-while">Boucle <code>while</code></h3>
+<pre><code class="language-html">@{ int i = 0; while (i &lt; 5) {
+&lt;p&gt;Compteur: @i&lt;/p&gt;
+i++; } }
 </code></pre>
-<h2 id="exemples-avances">Exemples Avancés</h2>
-<h3 id="usage-de-computed">Usage de <code>computed</code></h3>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;div&gt;{{ doubled }}&lt;/div&gt;
-&lt;/template&gt;
-
-&lt;script setup&gt;
-  import { ref, computed } from &quot;vue&quot;;
-
-  const count = ref(2);
-  const doubled = computed(() =&gt; count.value * 2);
-&lt;/script&gt;
+<h3 id="condition-switch">Condition <code>switch</code></h3>
+<pre><code class="language-html">@switch (Model.TypeUtilisateur) { case &quot;Admin&quot;:
+&lt;p&gt;Vous avez les privilèges d'administrateur.&lt;/p&gt;
+break; case &quot;Utilisateur&quot;:
+&lt;p&gt;Bienvenue, utilisateur.&lt;/p&gt;
+break; default:
+&lt;p&gt;Type utilisateur inconnu.&lt;/p&gt;
+break; }
 </code></pre>
-<h3 id="formulaires-reactifs">Formulaires Réactifs</h3>
-<pre><code class="language-html">&lt;template&gt;
-  &lt;form @submit.prevent=&quot;handleSubmit&quot;&gt;
-    &lt;input v-model=&quot;form.name&quot; placeholder=&quot;Name&quot; /&gt;
-    &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/template&gt;
-
-&lt;script setup&gt;
-  import { reactive } from &quot;vue&quot;;
-
-  const form = reactive({
-    name: &quot;&quot;,
-  });
-
-  function handleSubmit() {
-    console.log(form.name);
-  }
-&lt;/script&gt;
+<h2 id="helpers-html">Helpers HTML</h2>
+<h3 id="label-et-input">Label et Input</h3>
+<pre><code class="language-html">@Html.LabelFor(model =&gt; model.Nom) @Html.TextBoxFor(model =&gt; model.Nom)
+</code></pre>
+<h3 id="checkbox-et-radio-button">Checkbox et Radio Button</h3>
+<pre><code class="language-html">@Html.CheckBoxFor(model =&gt; model.EstActif) @Html.RadioButtonFor(model =&gt;
+model.Genre, &quot;Homme&quot;) @Html.RadioButtonFor(model =&gt; model.Genre, &quot;Femme&quot;)
+</code></pre>
+<h3 id="dropdownlist">DropdownList</h3>
+<pre><code class="language-html">@Html.DropDownListFor(model =&gt; model.CatégorieId, new
+SelectList(Model.Catégories, &quot;Id&quot;, &quot;Nom&quot;))
+</code></pre>
+<h2 id="validation-et-messages-derreur">Validation et Messages d'Erreur</h2>
+<h3 id="afficher-les-erreurs-de-validation">Afficher les erreurs de validation</h3>
+<pre><code class="language-html">@Html.ValidationSummary(true) @Html.ValidationMessageFor(model =&gt; model.Nom)
+</code></pre>
+<h2 id="partials-et-layouts">Partials et Layouts</h2>
+<h3 id="utiliser-un-layout">Utiliser un Layout</h3>
+<pre><code class="language-html">@{ Layout = &quot;_Layout.cshtml&quot;; }
+</code></pre>
+<h3 id="rendu-dune-vue-partielle">Rendu d'une vue partielle</h3>
+<pre><code class="language-html">@Html.Partial(&quot;_PartialView&quot;, Model.PartieDeLaVue)
+</code></pre>
+<h3 id="sections-et-rendu">Sections et Rendu</h3>
+<pre><code class="language-html">@section Scripts {
+&lt;script src=&quot;monScript.js&quot;&gt;&lt;/script&gt;
+}
+</code></pre>
+<h3 id="inclusion-de-fichiers-js-et-css">Inclusion de fichiers JS et CSS</h3>
+<pre><code class="language-html">@section Styles {
+&lt;link rel=&quot;stylesheet&quot; href=&quot;~/css/site.css&quot; /&gt;
+}
 </code></pre></div>
             </div>
         </div>
@@ -321,12 +258,12 @@ onUnmounted(() =&gt; {
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../bootstrap.bundle.min.js"></script>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
         <script>
             var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../base.js"></script>
+        <script src="../../js/base.js"></script>
         <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
