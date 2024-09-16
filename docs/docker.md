@@ -138,6 +138,14 @@
 - `docker import <nom_fichier.tar> <nom_image>`  
   Importe un système de fichiers dans une nouvelle image Docker.
 
+## Astuces
+
+Supprimer tous les containers sauf un en particulier
+
+```bash
+docker ps -aq | grep -v $(docker ps -aqf "name=my_container") | xargs docker rm
+```
+
 ---
 
 Cette cheatsheet couvre les commandes Docker les plus couramment utilisées pour la gestion des images, des conteneurs, des réseaux, des volumes, et des tâches de diagnostic. Utilisez-la comme référence rapide pour vos opérations Docker quotidiennes.

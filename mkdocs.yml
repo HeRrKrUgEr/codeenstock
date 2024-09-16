@@ -8,6 +8,8 @@ nav:
   - .NET Core:
       - Razor: dotnet/razor.md
   - Git:
+      - gitignore:
+          - laravel + vue3: git/gitignore/laravelvue.md
       - Authentification Git: git/auth.md
       - CheatSheet: git/git.md
   - Docker: docker.md
