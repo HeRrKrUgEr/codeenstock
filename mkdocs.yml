@@ -1,4 +1,4 @@
-site_name: Plan Geek
+site_name: Code en Stock
 nav:
   - Home: index.md
   - Python: python.md
