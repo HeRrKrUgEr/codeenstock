@@ -1,17 +1,5 @@
-# Welcome to MkDocs
+# Code en Stock
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Du code des cheatsheets et des tips, et tout le monde est heureux !
 
-## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
