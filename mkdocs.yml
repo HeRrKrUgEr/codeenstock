@@ -1,21 +1,23 @@
 site_name: Code en Stock
 nav:
   - Home: index.md
-  - Python: python.md
-  - JavaScript:
-      - AlpineJS: js/alpinejs.md
-      - Vue3 Composition Api: js/vue3.md
-  - Laravel: laravel.md
-  - .NET Core:
+  - Docker: docker.md
+  - DOTNET Core:
       - Razor: dotnet/razor.md
   - Git:
       - gitignore:
           - Projet Laravel et Vue3: git/gitignore/laravelvue.md
       - Authentification Git: git/auth.md
       - CheatSheet: git/git.md
-  - Docker: docker.md
-  - Google: 
-    - Search Engine Tips: google/search.md 
+  - Google:
+      - Search Engine Tips: google/search.md
+  - JavaScript:
+      - AlpineJS: js/alpinejs.md
+      - Vue3 Composition Api: js/vue3.md
+  - Laravel: laravel.md
+  - Linux:
+      - Vi-Vim: vim.md
+  - Python: python.md
 theme:
   name: "material"
   highlightjs: true
