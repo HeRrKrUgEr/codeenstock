@@ -1,5 +1,4 @@
-# Code en Stock
+# Bienvenue sur Code En Stock
 
-Du code des cheatsheets et des tips, et tout le monde est heureux !
-
-
+Tous nos codes, cheatsheets et astuces en tout genres sont garanties sans gluten ! Le premier site quui oeuvre pour la sauvegarde des Geeks de grenier, une éspèce en voie de disparition !
+(Nous vous informons qu'aucun Geek n'a été maltraité ou enlevé à son milieu naturel durant le developpement de ce site)

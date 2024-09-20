@@ -1,7 +1,5 @@
 site_name: Code en Stock
-site_description: Bienvenue sur Code En Stock, tous nos codes, cheatsheets et astuces en tout genre sont garanties sans gluten ! Le premier site quui oeuvre pour la sauvegarde des Geeks de grenier, une éspèce en voie de disparition ! (Nous vous informons qu'aucun Geek n'a été maltraité ou enlevé à son milieu naturel durant le developpement de ce site)
-site_author: HeRrKrUgEr
-Copyright: A Gauche au Fond du Couloir
+site_description: Des astuces, des cheatsheets
 nav:
   - Home: index.md
   - Docker: docker.md
@@ -42,3 +40,4 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tilde
