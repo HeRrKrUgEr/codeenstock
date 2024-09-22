@@ -19,7 +19,7 @@ nav:
       - Vue3 Composition Api: js/vue3.md
   - Laravel: laravel.md
   - Linux:
-      - Vi-Vim: vim.md
+      - Vi-Vim: linux/vim.md
   - Python: python.md
 theme:
   name: "material"
