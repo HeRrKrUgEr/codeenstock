@@ -26,6 +26,10 @@ theme:
   locale: fr
   highlightjs: true
   color_mode: auto
+extra:
+  analytics:
+    provider: google
+    property: G-WD04V335CB
 markdown_extensions:
   - pymdownx.arithmatex
   - pymdownx.betterem:
