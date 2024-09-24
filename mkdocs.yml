@@ -17,7 +17,9 @@ nav:
   - JavaScript:
       - AlpineJS: js/alpinejs.md
       - Vue3 Composition Api: js/vue3.md
-  - Laravel: laravel.md
+  - Laravel:
+      - Laravel Artisan et Eloquent Queries: laravel/laravel.md
+      - Laravel Blade: laravel/blade.md
   - Linux:
       - Vi-Vim: linux/vim.md
   - Python: python.md
