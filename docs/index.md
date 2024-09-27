@@ -1,3 +1,5 @@
+![Image title](https://codeenstock.com/docs/images){ align=left }
+
 # Bienvenue sur Code En Stock
 
 Tous nos codes, cheatsheets et astuces en tout genre sont garanties sans gluten !
