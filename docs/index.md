@@ -1,6 +1,8 @@
-![Image title](https://codeenstock.com/docs/images/codeenstock.webp){ align=left }
+#
 
-# Bienvenue sur Code En Stock
+<figure markdown="span">
+![Logo Code En Stock](images/codeenstock.webp)
+</figure>
 
 Tous nos codes, cheatsheets et astuces en tout genre sont garanties sans gluten !
 Nos Geeks sont élevés en liberté, et nourris avec du code 100% naturel, sans colorants ni conservateurs !
