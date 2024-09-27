@@ -1,4 +1,4 @@
-![Image title](https://codeenstock.com/docs/images){ align=left }
+![Image title](https://codeenstock.com/docs/images/codeenstock.webp){ align=left }
 
 # Bienvenue sur Code En Stock
 
