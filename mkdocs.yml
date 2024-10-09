@@ -36,6 +36,7 @@ extra:
   analytics:
     provider: google
     property: G-WD04V335CB
+
 markdown_extensions:
   - md_in_html
   - pymdownx.arithmatex
