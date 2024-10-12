@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block scripts %}
+{% block extrahead %}
 <!-- Add scripts that need to run before here -->
+{{ super() }}
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6143753833539808"
     crossorigin="anonymous"></script>
-{{ super() }}
 <!-- Add scripts that need to run afterwards here -->
 
 {% endblock %}
