@@ -20,7 +20,11 @@ nav:
       - Laravel Artisan et Eloquent Queries: laravel/laravel.md
       - Laravel Blade: laravel/blade.md
   - Linux:
+      - Commandes Bash Utiles: linux/bash.md
+      - La commande 'Grep': linux/grep.md
+      - La commande 'Sed': linux/sed.md
       - Vi-Vim: linux/vim.md
+
   - Python: python.md
 theme:
   name: "material"
