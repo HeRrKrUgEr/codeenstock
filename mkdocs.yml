@@ -40,6 +40,8 @@ extra:
   analytics:
     provider: google
     property: G-WD04V335CB
+extra_files:
+  - extra/ads.txt
 
 markdown_extensions:
   - md_in_html
