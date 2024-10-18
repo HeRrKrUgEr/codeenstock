@@ -36,8 +36,8 @@ theme:
   highlightjs: true
   color_mode: auto
   custom_dir: overrides
-extra_files:
-  - [extra/ads.txt]
+extra_templates:
+  - extra/ads.txt
 extra:
   analytics:
     provider: google
