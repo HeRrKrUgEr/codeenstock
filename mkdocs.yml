@@ -20,6 +20,7 @@ nav:
   - Laravel:
       - Laravel Artisan et Eloquent Queries: laravel/laravel.md
       - Laravel Blade: laravel/blade.md
+      - Setup a LAMP Stack and deploy a Laravel application on Ubuntu VPS: laravel/lamp-vps.md
   - Linux:
       - Commandes Bash Utiles: linux/bash.md
       - GREP: linux/grep.md
