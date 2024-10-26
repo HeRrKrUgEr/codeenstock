@@ -22,8 +22,9 @@ nav:
       - Laravel Blade: laravel/blade.md
   - Linux:
       - Commandes Bash Utiles: linux/bash.md
-      - La commande 'Grep': linux/grep.md
-      - La commande 'Sed': linux/sed.md
+      - GREP: linux/grep.md
+      - SED: linux/sed.md
+      - SSH: linux/ssh.md
       - Vi-Vim: linux/vim.md
 
   - Python: python.md
