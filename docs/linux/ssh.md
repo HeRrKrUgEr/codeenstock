@@ -1,124 +1,124 @@
 
-# SSH Command Line Cheatsheet
+# Aide-mémoire SSH en ligne de commande
 
-## Basics
+## Bases
 
-- **Connect to Server**
-
-  ```bash
-  ssh user@host
-  ```
-
-- **Specify Port**
+- **Se connecter au serveur**
 
   ```bash
-  ssh -p port_number user@host
+  ssh utilisateur@hôte
   ```
 
-- **Connect with Identity File**
+- **Spécifier le port**
 
   ```bash
-  ssh -i /path/to/private_key user@host
+  ssh -p numéro_port utilisateur@hôte
   ```
 
-- **Connect Using a Config File**
+- **Connexion avec un fichier d'identité**
 
   ```bash
-  ssh host_alias
+  ssh -i /chemin/vers/clé_privée utilisateur@hôte
   ```
 
-  *Config file path: `~/.ssh/config`*
+- **Connexion via un fichier de configuration**
+
+  ```bash
+  ssh alias_hôte
+  ```
+
+  *Chemin du fichier de config : `~/.ssh/config`*
 
   ```plaintext
-  Host host_alias
-      HostName hostname
-      User username
-      Port port_number
-      IdentityFile /path/to/private_key
+  Host alias_hôte
+      HostName nomhôte
+      User utilisateur
+      Port numéro_port
+      IdentityFile /chemin/vers/clé_privée
   ```
 
-## Key Management
+## Gestion des clés
 
-- **Generate SSH Key Pair**
+- **Générer une paire de clés SSH**
 
   ```bash
-  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  ssh-keygen -t rsa -b 4096 -C "votre_email@example.com"
   ```
 
-- **Copy Public Key to Server**
+- **Copier la clé publique vers le serveur**
 
   ```bash
-  ssh-copy-id user@host
+  ssh-copy-id utilisateur@hôte
   ```
 
-- **Add Key to SSH Agent**
+- **Ajouter la clé à l'agent SSH**
 
   ```bash
-  ssh-add /path/to/private_key
+  ssh-add /chemin/vers/clé_privée
   ```
 
-## File Transfer
+## Transfert de fichiers
 
-- **Using SCP**
-  - **Copy File to Server**
+- **Utilisation de SCP**
+  - **Copier un fichier vers le serveur**
 
     ```bash
-    scp file user@host:/path/on/server
+    scp fichier utilisateur@hôte:/chemin/vers/serveur
     ```
 
-  - **Copy Directory to Server**
+  - **Copier un dossier vers le serveur**
 
     ```bash
-    scp -r /local/dir user@host:/remote/dir
+    scp -r /dossier/local utilisateur@hôte:/dossier/serveur
     ```
 
-  - **Copy File from Server**
+  - **Copier un fichier depuis le serveur**
 
     ```bash
-    scp user@host:/path/on/server/file /local/path
+    scp utilisateur@hôte:/chemin/vers/serveur/fichier /chemin/local
     ```
 
-- **Using SFTP**
+- **Utilisation de SFTP**
 
   ```bash
-  sftp user@host
+  sftp utilisateur@hôte
   ```
 
-  - **SFTP Commands**:
-    - `get remote_file` - Download a file
-    - `put local_file` - Upload a file
-    - `ls` - List files on the server
-    - `exit` - Exit SFTP
+  - **Commandes SFTP** :
+    - `get fichier_distant` - Télécharger un fichier
+    - `put fichier_local` - Télécharger un fichier
+    - `ls` - Lister les fichiers sur le serveur
+    - `exit` - Quitter SFTP
 
-## Port Forwarding
+## Transfert de port
 
-- **Local Port Forwarding**
+- **Transfert de port local**
 
   ```bash
-  ssh -L local_port:destination_host:destination_port user@host
+  ssh -L port_local:hôte_destination:port_destination utilisateur@hôte
   ```
 
-- **Remote Port Forwarding**
+- **Transfert de port distant**
 
   ```bash
-  ssh -R remote_port:destination_host:destination_port user@host
+  ssh -R port_distant:hôte_destination:port_destination utilisateur@hôte
   ```
 
-- **Dynamic Port Forwarding (SOCKS Proxy)**
+- **Transfert de port dynamique (Proxy SOCKS)**
 
   ```bash
-  ssh -D local_port user@host
+  ssh -D port_local utilisateur@hôte
   ```
 
 ## Tunneling
 
-- **SSH Tunneling with ProxyJump**
+- **Tunneling SSH avec ProxyJump**
 
   ```bash
-  ssh -J user@jumphost user@targethost
+  ssh -J utilisateur@hôte_pont utilisateur@hôte_cible
   ```
 
-- **SSH Multiplexing**
+- **Multiplexage SSH**
 
   ```plaintext
   Host *
@@ -127,59 +127,59 @@
       ControlPersist 600
   ```
 
-## Miscellaneous
+## Divers
 
-- **Run Command on Remote Server**
-
-  ```bash
-  ssh user@host "command"
-  ```
-
-- **Verbose Mode (for Debugging)**
+- **Exécuter une commande sur le serveur distant**
 
   ```bash
-  ssh -v user@host
+  ssh utilisateur@hôte "commande"
   ```
 
-- **Disable Host Key Checking (Use with Caution)**
+- **Mode verbeux (pour le débogage)**
 
   ```bash
-  ssh -o StrictHostKeyChecking=no user@host
+  ssh -v utilisateur@hôte
   ```
 
-- **SSH Agent Forwarding**
+- **Désactiver la vérification de la clé de l'hôte (à utiliser avec prudence)**
 
   ```bash
-  ssh -A user@host
+  ssh -o StrictHostKeyChecking=no utilisateur@hôte
   ```
 
-## SSH Config File Tips
+- **Redirection de l'agent SSH**
 
-- **Sample Config Entry**
+  ```bash
+  ssh -A utilisateur@hôte
+  ```
+
+## Conseils pour le fichier de configuration SSH
+
+- **Exemple d'entrée de configuration**
 
   ```plaintext
-  Host myserver
-      HostName example.com
-      User username
+  Host monserveur
+      HostName exemple.com
+      User utilisateur
       Port 22
       IdentityFile ~/.ssh/id_rsa
       ForwardAgent yes
   ```
 
-## Common Issues
+## Problèmes courants
 
-- **Fix "Permissions are too open" Error**
+- **Correction de l'erreur "Les autorisations sont trop ouvertes"**
 
   ```bash
   chmod 600 ~/.ssh/id_rsa
   ```
 
-- **Add Known Host**
+- **Ajouter un hôte connu**
 
   ```bash
-  ssh-keyscan -H host >> ~/.ssh/known_hosts
+  ssh-keyscan -H hôte >> ~/.ssh/known_hosts
   ```
 
 ---
 
-This covers the essential SSH commands and configurations to streamline SSH usage!
+Ce guide couvre les commandes SSH essentielles et les configurations pour optimiser l'utilisation de SSH !
