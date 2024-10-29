@@ -12,6 +12,8 @@ nav:
           - Projet Laravel et Vue3: git/gitignore/laravelvue.md
       - Authentification Git: git/auth.md
       - CheatSheet: git/git.md
+  - Golang:
+      - CheatSheet Golang: golang/golang.md
   - Google:
       - Search Engine Tips: google/search.md
   - JavaScript:
