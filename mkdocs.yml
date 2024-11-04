@@ -15,6 +15,9 @@ nav:
       - CheatSheet Golang: golang/golang.md
   - Google:
       - Search Engine Tips: google/search.md
+  - Imagemagick:
+      - Compiler ImageMagick en tant que PIC: imagemagick/pic.md
+      - Utiliser ImageMagick: imagemagick/cheatsheet.md
   - JavaScript:
       - AlpineJS: js/alpinejs.md
       - Vue3 Composition Api: js/vue3.md
