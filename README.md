@@ -1,9 +1,9 @@
 
-# Plangeek Documentation Website
+# CodeEnStock Documentation Website
 
 Bienvenue sur le site de documentation plangeek, conçu pour offrir des guides rapides et des cheatsheets pour divers langages de programmation et technologies.
 
-Accédez au site ici : [Plangeek Documentation Website](https://www.plangeek.com)
+Accédez au site ici : [Plangeek Documentation Website](https://www.codeenstock.com)
 
 ## Table des Matières
 
@@ -88,6 +88,6 @@ Le site plangeek est déployé automatiquement sur GitHub Pages grâce à GitHub
 
 ---
 
-Ce site de documentation est conçu pour être simple à utiliser et à maintenir. N'hésitez pas à contribuer et à améliorer les documentations pour aider la communauté plangeek !
+Ce site de documentation est conçu pour être simple à utiliser et à maintenir. N'hésitez pas à contribuer et à améliorer les documentations pour aider la communauté CodeEnStock !
 
-Accédez au site plangeek ici : [Plangeek Documentation Website](https://www.plangeek.com)
+Accédez au site CodeEnStock ici : [Plangeek Documentation Website](https://www.codeenstock.com)
