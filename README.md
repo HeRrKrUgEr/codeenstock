@@ -3,7 +3,7 @@
 
 Bienvenue sur le site de documentation CodeEnStock, conçu pour offrir des guides rapides et des cheatsheets pour divers langages de programmation et technologies.
 
-Accédez au site ici : [Plangeek Documentation Website](https://www.codeenstock.com)
+Accédez au site ici : [CodeEnStock Documentation Website](https://www.codeenstock.com)
 
 ## Table des Matières
 
@@ -15,7 +15,7 @@ Accédez au site ici : [Plangeek Documentation Website](https://www.codeenstock.
 
 ## Introduction
 
-Le site plangeek utilise **MkDocs**, un générateur de site statique simple à utiliser, basé sur Markdown. Il est conçu pour faciliter la création et la mise à jour de documentations techniques, avec un focus sur la simplicité et l'efficacité.
+Le site CodeEnStock utilise **MkDocs**, un générateur de site statique simple à utiliser, basé sur Markdown. Il est conçu pour faciliter la création et la mise à jour de documentations techniques, avec un focus sur la simplicité et l'efficacité.
 
 ## Comment Naviguer sur le Site
 
@@ -31,9 +31,9 @@ Le site plangeek utilise **MkDocs**, un générateur de site statique simple à 
 
 Pour ajouter ou mettre à jour des documentations, suivez ces étapes :
 
-1. **Clonez le dépôt** : Clonez le dépôt GitHub du site plangeek sur votre machine locale :
+1. **Clonez le dépôt** : Clonez le dépôt GitHub du site codeenstock sur votre machine locale :
    ```bash
-   git clone https://github.com/votre-utilisateur/plangeek.git
+   git clone https://github.com/votre-utilisateur/codeenstock.git
    ```
 
 2. **Ajouter du Contenu** : Ajoutez ou modifiez des fichiers Markdown (`.md`) dans le dossier `docs`. Chaque fichier représente une page de documentation.
@@ -59,7 +59,7 @@ Pour ajouter ou mettre à jour des documentations, suivez ces étapes :
 
 ## Installation et Configuration de MkDocs
 
-Pour travailler sur le site plangeek localement, suivez ces étapes pour installer MkDocs :
+Pour travailler sur le site CodeEnStock localement, suivez ces étapes pour installer MkDocs :
 
 1. **Installer MkDocs** :
    ```bash
@@ -74,7 +74,7 @@ Pour travailler sur le site plangeek localement, suivez ces étapes pour install
 
 ## Déploiement
 
-Le site plangeek est déployé automatiquement sur GitHub Pages grâce à GitHub Actions. Chaque fois que vous poussez des changements vers la branche principale, le site est reconstruit et déployé.
+Le site CodeEnStock est déployé automatiquement sur GitHub Pages grâce à GitHub Actions. Chaque fois que vous poussez des changements vers la branche principale, le site est reconstruit et déployé.
 
 1. **Build le Site** : Si vous souhaitez construire le site manuellement :
    ```bash
@@ -90,4 +90,4 @@ Le site plangeek est déployé automatiquement sur GitHub Pages grâce à GitHub
 
 Ce site de documentation est conçu pour être simple à utiliser et à maintenir. N'hésitez pas à contribuer et à améliorer les documentations pour aider la communauté CodeEnStock !
 
-Accédez au site CodeEnStock ici : [Plangeek Documentation Website](https://www.codeenstock.com)
+Accédez au site CodeEnStock ici : [CodeEnStock Documentation Website](https://www.codeenstock.com)
