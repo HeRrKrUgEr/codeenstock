@@ -1,7 +1,7 @@
 
 # CodeEnStock Documentation Website
 
-Bienvenue sur le site de documentation plangeek, conçu pour offrir des guides rapides et des cheatsheets pour divers langages de programmation et technologies.
+Bienvenue sur le site de documentation CodeEnStock, conçu pour offrir des guides rapides et des cheatsheets pour divers langages de programmation et technologies.
 
 Accédez au site ici : [Plangeek Documentation Website](https://www.codeenstock.com)
 
